@@ -6,7 +6,7 @@
 运行脚本：
 
 ```
-wget https://github.com/hunzhang/v2ray-wss/blob/main/ws.sh bash ws.sh
+wget https://github.com/hunzhang/v2ray-wss/blob/main/ws.sh && bash ws.sh
 ```
 
 已测试系统如下：
