@@ -7,15 +7,6 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
-if [ -f "/usr/bin/apt-get" ]; then
-    # apt-get update -y && apt-get upgrade -y
-    apt-get install -y gawk curl
-else
-    # yum update -y && yum upgrade -y
-    # yum install -y epel-release
-    yum install -y gawk curl
-fi
-
 timedatectl set-timezone Asia/Shanghai
 v2uuid=$(cat /proc/sys/kernel/random/uuid)
 v2uuid=800d916d-1f89-4a50-9306-1500ddaee396
@@ -24,10 +15,10 @@ v2port=$(shuf -i 2000-65000 -n 1)
 
 getIP(){
     local serverIP=
-    serverIP=$(curl -s -4 http://www.cloudflare.com/cdn-cgi/trace | grep "ip" | awk -F "[=]" '{print $2}')
-    if [[ -z "${serverIP}" ]]; then
-        serverIP=$(curl -s -6 http://www.cloudflare.com/cdn-cgi/trace | grep "ip" | awk -F "[=]" '{print $2}')
-    fi
+    #serverIP=$(curl -s -4 http://www.cloudflare.com/cdn-cgi/trace | grep "ip" | awk -F "[=]" '{print $2}')
+    #if [[ -z "${serverIP}" ]]; then
+        #serverIP=$(curl -s -6 http://www.cloudflare.com/cdn-cgi/trace | grep "ip" | awk -F "[=]" '{print $2}')
+    #fi
     echo "${serverIP}"
 }
 
