@@ -11,7 +11,7 @@ timedatectl set-timezone Asia/Shanghai
 v2uuid=$(cat /proc/sys/kernel/random/uuid)
 v2uuid=800d916d-1f89-4a50-9306-1500ddaee396
 v2path=$(cat /dev/urandom | head -1 | md5sum | head -c 6)
-v2port=$(shuf -i 2000-65000 -n 1)
+v2port=16384
 
 getIP(){
     local serverIP=
@@ -40,7 +40,7 @@ cat >/usr/local/etc/v2ray/config.json<<EOF
 {
   "inbounds": [
     {
-      "port": 16384,
+      "port": $v2port,
       "protocol": "vmess",
       "settings": {
         "clients": [
