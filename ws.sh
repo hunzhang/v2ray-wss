@@ -7,7 +7,6 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
-mv /etc/resolv.conf /etc/resolv.conf.bak && echo -e "nameserver 2001:67c:2b0::4\nnameserver 2001:67c:2b0::6" > /etc/resolv.conf
 timedatectl set-timezone Asia/Shanghai
 v2uuid=$(cat /proc/sys/kernel/random/uuid)
 v2uuid=800d916d-1f89-4a50-9306-1500ddaee396
