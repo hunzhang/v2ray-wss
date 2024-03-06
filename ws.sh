@@ -14,7 +14,7 @@ v2path=$(cat /dev/urandom | head -1 | md5sum | head -c 6)
 v2port=16384
 
 getIP(){
-    local serverIP=
+    local serverIP=2a02:180:6:1::bc2
     #serverIP=$(curl -s -4 http://www.cloudflare.com/cdn-cgi/trace | grep "ip" | awk -F "[=]" '{print $2}')
     #if [[ -z "${serverIP}" ]]; then
         #serverIP=$(curl -s -6 http://www.cloudflare.com/cdn-cgi/trace | grep "ip" | awk -F "[=]" '{print $2}')
