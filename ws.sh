@@ -8,11 +8,11 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 if [ -f "/usr/bin/apt-get" ]; then
-    apt-get update -y && apt-get upgrade -y
+    # apt-get update -y && apt-get upgrade -y
     apt-get install -y gawk curl
 else
-    yum update -y && yum upgrade -y
-    yum install -y epel-release
+    # yum update -y && yum upgrade -y
+    # yum install -y epel-release
     yum install -y gawk curl
 fi
 
