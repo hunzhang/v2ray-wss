@@ -6,12 +6,8 @@
 运行脚本：
 
 ```
-wget https://raw.githubusercontent.com/yeahwu/v2ray-wss/main/tcp-wss.sh && bash tcp-wss.sh
+wget https://github.com/hunzhang/v2ray-wss/blob/main/ws.sh bash ws.sh
 ```
-
-**便宜VPS推荐：** https://hostalk.net/deals.html
-
-![image](https://github.com/yeahwu/v2ray-wss/assets/13328328/cf45b803-a5f1-4fe6-aa53-765416bb37e0)
 
 已测试系统如下：
 
